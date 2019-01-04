@@ -1,0 +1,17 @@
+<span *ngIf="!sortDisabled" class="sorting-header">
+  <ng-container [ngTemplateOutlet]="headerTpl"></ng-container>
+  <span class="sorting-direction">
+    <span class="glyphicon glyphicon-chevron-up" *ngIf="sortDirection === 'asc'"></span>
+    <span class="glyphicon glyphicon-chevron-down" *ngIf="sortDirection === 'desc'"></span>
+    <span class="no-sort" *ngIf="!sortDirection">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+      <span class="glyphicon glyphicon-chevron-down"></span>
+    </span>
+  </span>
+</span>
+
+<span *ngIf="sortDisabled">
+  <ng-container [ngTemplateOutlet]="headerTpl"></ng-container>
+</span>
+
+<ng-template #headerTpl><ng-content></ng-content></ng-template>

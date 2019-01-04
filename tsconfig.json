@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-table-sortable": [
+        "dist/ng-table-sortable"
+      ],
+      "ng-table-sortable/*": [
+        "dist/ng-table-sortable/*"
+      ]
+    }
   }
 }
