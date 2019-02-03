@@ -19,7 +19,19 @@ const sortLine = (sort: ColumnSort) => {
   return function(a, b) {
     const columnA = a[sort.sortColumn];
     const columnB = b[sort.sortColumn];
-    const result = (columnA < columnB) ? -1 : (columnA > columnB) ? 1: 0;
+    if (columnA === columnB) {
+      return 0;
+    }
+    if (columnA === null) {
+      return sortOrder;
+    }
+    if (columnB === null) {
+      return -1 * sortOrder;
+    }
+    if (typeof columnA === 'string') {
+      return columnA.localeCompare(columnB) * sortOrder;
+    }
+    const result = (columnA < columnB) ? -1 : (columnA > columnB) ? 1 : 0;
     return result * sortOrder;
   };
 };
