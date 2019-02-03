@@ -5,3 +5,4 @@
 export * from './lib/ng-table-sortable.service';
 export * from './lib/ng-table-sortable.component';
 export * from './lib/ng-table-sortable.module';
+export * from './lib/utils';

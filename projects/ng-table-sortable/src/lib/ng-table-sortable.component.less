@@ -1,12 +1,27 @@
-.sorting-header {
+.sorting-wrapper {
   cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
 
-  > .sorting-direction {
-    margin-left: 5px;
+  > .sorting-header {
+    position: relative;
+    padding: 0 18px 0 2px;
+    margin-left: 16px;
 
-    > .no-sort {
-      > .glyphicon:last-child {
-        margin-left: -2px;
+    > .sorting-direction {
+      position: absolute;
+      top: 50%;
+      right: 2px;
+      width: 14px;
+      height: 14px;
+      margin-top: -7px;
+      line-height: 14px;
+      background-repeat: no-repeat;
+      display: inline-block;
+
+      &.no-sort {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAMAAADOvxanAAAAVFBMVEUAAABCQkJZWVkZGRnJyckgICAZGRkZGRn8/PweHh4dHR0aGhoaGhpUVFQbGxvQ0NDc3NxMTExSUlIbGxvr6+s4ODhKSkogICAtLS00NDQzMzMnJydSEPrQAAAAGHRSTlMA1ssZRLgdAQbDyisqsZo8QdXUq0r9xPepSRwiAAAAX0lEQVQI13XHSQKAIAwEwQAKxn13Ev7/T2Pu9qmarJKPXIicI4PH4hxaKNrhm2S8bJK5h4YzKHrzJNtK6yYT/TdXzpS5zuYg4MSQYF6i4IHExdw1UVRi05HPrrvT53a+qyMFC9t04gcAAAAASUVORK5CYII=);
       }
     }
   }
