@@ -40,7 +40,7 @@ export class NgTableSortableComponent implements OnInit, OnDestroy {
     }
   }
 
-  onChangeColumns(columns: ColumnSort[]) {
+  onChangeColumns(columns: ColumnSort[]): void {
     const currentColumn: ColumnSort = columns.find((column: ColumnSort) => this.columnName === column.sortColumn);
     if (currentColumn) {
       this.sortDirection = currentColumn.sortDirection;

@@ -10,7 +10,7 @@ export class NgTableSortableService {
 
   columnSorted$ = this.columnSortedSource.asObservable();
 
-  columnSorted(column: ColumnSort, append: boolean) {
+  columnSorted(column: ColumnSort, append: boolean): void {
     if (append) {
       const index: number = this.columnsList.findIndex((evt: ColumnSort) => evt.sortColumn === column.sortColumn);
       if (index > -1) {
@@ -23,15 +23,15 @@ export class NgTableSortableService {
     this.columnSortedSource.next(this.columnsList);
   }
 
-  cleanSortColumns() {
+  cleanSortColumns(): void {
     this.columnsList = [];
   }
 
-  addSortColumn(column: ColumnSort) {
+  addSortColumn(column: ColumnSort): void {
     this.columnsList.push(column);
   }
 
-  updateSortColumns() {
+  updateSortColumns(): void {
     this.columnSortedSource.next(this.columnsList);
   }
 

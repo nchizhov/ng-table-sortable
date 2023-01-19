@@ -31,7 +31,7 @@ export class NgTableSortableDirective implements OnChanges, OnDestroy {
     this.columnSortedSubscription.unsubscribe();
   }
 
-  private updateSortingList() {
+  private updateSortingList(): void {
     this.sortableService.cleanSortColumns();
     if (this.sortingList.length) {
       this.sortingList.forEach(
