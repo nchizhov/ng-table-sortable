@@ -16,8 +16,8 @@
   },
   "homepage": "https://nchizhov.github.io/ng-table-sortable",
   "peerDependencies": {
-    "@angular/core": "^9.1.13",
-    "@angular/common": "^9.1.13"
+    "@angular/core": "~10.2.4",
+    "@angular/common": "~10.2.4"
   },
   "dependencies": {
     "tslib": "^2.0.0"
