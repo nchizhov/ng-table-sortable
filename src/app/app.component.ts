@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
     this.mainData2 = [...this.data2];
   }
 
-  onSorted(event: ColumnSort[]) {
+  onSorted(event: ColumnSort[]): void {
     if (event.length) {
       this.data.sort(sortTableData(event));
     } else {
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  onSorted2(event: ColumnSort[]) {
+  onSorted2(event: ColumnSort[]): void {
     if (event.length) {
       this.data2.sort(sortTableData(event));
     } else {
@@ -54,27 +54,27 @@ export class AppComponent implements OnInit {
     }
   }
 
-  onChangeSort() {
+  onChangeSort(): void {
     this.sortOrder = ['name', 'id'];
   }
 
-  onChangeSort2() {
+  onChangeSort2(): void {
     this.sortOrder2 = ['name', 'id'];
   }
 
-  onResort() {
+  onResort(): void {
     this.sortOrder = [...this.sortOrder];
   }
 
-  onResort2() {
+  onResort2(): void {
     this.sortOrder2 = [...this.sortOrder2];
   }
 
-  onSortReset() {
+  onSortReset(): void {
     this.sortOrder = [];
   }
 
-  onSortReset2() {
+  onSortReset2(): void {
     this.sortOrder2 = [];
   }
 }
