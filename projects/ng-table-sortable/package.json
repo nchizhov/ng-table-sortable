@@ -1,6 +1,6 @@
 {
   "name": "@inok/ng-table-sortable",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Table Sorter component for Angular",
   "repository": "git@github.com:nchizhov/ng-table-sortable.git",
   "keywords": [
@@ -16,8 +16,8 @@
   },
   "homepage": "https://nchizhov.github.io/ng-table-sortable",
   "peerDependencies": {
-    "@angular/core": "^12.2.0",
-    "@angular/common": "^12.2.0"
+    "@angular/core": "^13.3.0",
+    "@angular/common": "^13.3.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

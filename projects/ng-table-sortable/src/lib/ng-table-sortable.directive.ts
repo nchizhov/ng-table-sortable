@@ -50,7 +50,7 @@ export class NgTableSortableDirective implements OnChanges, OnDestroy {
     };
     if (column.sortColumn[0] === '-') {
       column.sortDirection = 'desc';
-      column.sortColumn = sort.substr(1);
+      column.sortColumn = sort.slice(1);
     }
     return column;
   }
